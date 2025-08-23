@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Riya!</title>
+  <style>
+    body {
+      background: linear-gradient(to top right, #ffecd2 0%, #fcb69f 100%);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #ff4081;
+    }
+
+    h1 {
+      font-size: 60px;
+      animation: bounce 2s infinite;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    .balloons {
+      font-size: 40px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .cake {
+      font-size: 50px;
+      margin: 30px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e73370;
+    }
+  </style>
+</head>
+<body>
+  <div class="balloons">🎈🎉🎈🎉🎈</div>
+  <h1>Happy Birthday!</h1>
+  <div class="cake">🎂</div>
+  <p>Wishing you joy,and all the cake you can eat! 🎁🎊</p>
+
+  <button onclick="showMessage()">Click for a Surprise</button>
+
+  <p id="message" style="margin-top: 20px; font-weight: bold;"></p>
+
+  <script>
+    function showMessage() {
+      const messages = [
+        "Hope your birthday is as special as you are!",
+        "May all your dreams come true 🎉",
+        "You're one in a million – have a fantastic day!",
+        "Eat cake, make wishes, and enjoy every moment!"
+      ];
+      const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").innerText = randomMsg;
+    }
+  </script>
+</body>
+</html>
